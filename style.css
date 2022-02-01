@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 /* box sizing property so that if we add any padding to an ::-webkit-progress-inner-element
 or border it doesnt change the width  */
 * {
@@ -13,11 +13,33 @@ or border it doesnt change the width  */
 */
 
 body {
-  font-family: "Muli", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+/* 
+the higher the pixel for the blur
+ the more blurry it is
+ - calc even out the space
+ */
+.bg {
+  background: url("https://images.unsplash.com/photo-1505832018823-50331d70d237?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1208&q=80")
+    no-repeat center/cover;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vw + 60px);
+  z-index: -1;
+  filter: blur(0px);
+}
+
+.loading-text {
+  font-size: 50px;
+  color: #fff;
 }
